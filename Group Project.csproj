@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminAdd.aspx" />
+    <Content Include="AdminDisplay.aspx" />
+    <Content Include="AdminHome.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
     <Content Include="Home.aspx" />
@@ -98,6 +101,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAdd.aspx.cs">
+      <DependentUpon>AdminAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAdd.aspx.designer.cs">
+      <DependentUpon>AdminAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDisplay.aspx.cs">
+      <DependentUpon>AdminDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDisplay.aspx.designer.cs">
+      <DependentUpon>AdminDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackPage.Master.cs">
+      <DependentUpon>BackPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackPage.Master.designer.cs">
+      <DependentUpon>BackPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="FrontPage.Master.cs">
       <DependentUpon>FrontPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -116,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrontPage.Master" />
+    <Content Include="BackPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

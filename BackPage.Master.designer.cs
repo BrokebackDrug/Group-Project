@@ -11,7 +11,7 @@ namespace Group_Project
 {
 
 
-    public partial class FrontPage
+    public partial class BackPage
     {
 
         /// <summary>
