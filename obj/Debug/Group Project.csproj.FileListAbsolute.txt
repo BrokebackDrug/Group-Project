@@ -57,3 +57,13 @@ E:\Year 3\SWE310 Programming Elective II (2)\Group Project\Group Project\obj\Deb
 E:\Year 3\SWE310 Programming Elective II (2)\Group Project\Group Project\obj\Debug\Group Project.csproj.CopyComplete
 E:\Year 3\SWE310 Programming Elective II (2)\Group Project\Group Project\obj\Debug\Group Project.dll
 E:\Year 3\SWE310 Programming Elective II (2)\Group Project\Group Project\obj\Debug\Group Project.pdb
+D:\github\GitHub\Group-Project\bin\Group Project.dll.config
+D:\github\GitHub\Group-Project\bin\Group Project.dll
+D:\github\GitHub\Group-Project\bin\Group Project.pdb
+D:\github\GitHub\Group-Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\github\GitHub\Group-Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\github\GitHub\Group-Project\obj\Debug\Group Project.csprojAssemblyReference.cache
+D:\github\GitHub\Group-Project\obj\Debug\Group Project.csproj.CoreCompileInputs.cache
+D:\github\GitHub\Group-Project\obj\Debug\Group Project.csproj.CopyComplete
+D:\github\GitHub\Group-Project\obj\Debug\Group Project.dll
+D:\github\GitHub\Group-Project\obj\Debug\Group Project.pdb
