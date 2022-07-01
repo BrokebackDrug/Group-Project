@@ -50,6 +50,9 @@
             
         </div>
     </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            
+        </asp:ContentPlaceHolder>
 			
 			</div>
 		</div>
@@ -57,12 +60,12 @@
 
 	<!-- header section end -->
 
+
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             
         </asp:ContentPlaceHolder>
     </div>
-
 
 
 
