@@ -15,11 +15,13 @@
     <asp:Panel ID="Panel1" runat="server" BackColor="#F7F5F7"  Width="600px" style="margin-left:32%">
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="Your E-mail: *" Font-Names="Times New Roman"></asp:Label>
+        &nbsp;<asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Names="Times New Roman" ForeColor="Red" Width="400px"></asp:Label>
         <br />
         &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox1" runat="server" TextMode="Email" Width="550px" Font-Names="Times New Roman"></asp:TextBox><br /><br />
         &nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label3" runat="server" Font-Names="Times New Roman" Text="Password:*"></asp:Label>
+        &nbsp;<asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Times New Roman" ForeColor="Red" Width="400px"></asp:Label>
         <br />
         &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Width="550px"></asp:TextBox>
