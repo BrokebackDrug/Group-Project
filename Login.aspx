@@ -26,7 +26,7 @@
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="SIGN IN" BorderColor="#000000" BackColor="Black" ForeColor="White" />
+        <asp:Button ID="Button1" runat="server" Text="SIGN IN" BorderColor="#000000" BackColor="Black" ForeColor="White" OnClick="Button1_Click" />
         <br /><br />
     </asp:Panel>
     <br />
