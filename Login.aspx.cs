@@ -12,6 +12,7 @@ namespace Group_Project
     {
         bool valid = true;
         SqlConnection con;
+        string email;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -29,7 +30,7 @@ namespace Group_Project
         {
             try
             {
-                string strqry = "select * from Customer where USER_EMAIL=@Email";
+                string strqry = "select * from CUSTOMER where USER_EMAIL=@Email";
                 SqlCommand cmd = new SqlCommand(strqry, con);
 
                 cmd.Parameters.AddWithValue("@Email", Email);
@@ -52,18 +53,29 @@ namespace Group_Project
             }
         }
         //check if the password is consistent
-        protected bool check(string Email, string Passowrd)
+        protected bool check(string Email, string Password)
         {
             try
             {
-                string strqry = "select USER_PASSWORD from Customer where USER_EMAIL=@Email";
+                string strqry = "select USER_PASSWORD from CUSTOMER where USER_EMAIL=@Email";
+
                 SqlCommand cmd = new SqlCommand(strqry, con);
                 cmd.Parameters.AddWithValue("@Email", Email);
                 SqlDataReader r = cmd.ExecuteReader();
+                r.Read();
                 int passwordColPos = r.GetOrdinal("USER_PASSWORD");
-                Response.Write(r.GetValue(0));
-                r.Close();
-                return true;
+                string passwd = r.GetString(passwordColPos);
+                if (Password == passwd)
+                {
+                    email = Email;
+                    r.Close();
+                    return true;
+                }
+                else
+                {
+                    r.Close();
+                    return false;
+                }
             }
             catch(Exception ex)
             {
@@ -90,6 +102,7 @@ namespace Group_Project
                     Label4.Text = "";
                     valid = true;
             }
+
             if(TextBox2.Text=="")
             {
                     Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
@@ -98,10 +111,13 @@ namespace Group_Project
             else if(!check(TextBox1.Text,TextBox2.Text))
             {
                 Label5.Text = "THE PASSWORD IS NOT CORRECT";
+                valid = false;
             }
+            //登录成功 相应操作写这
             else
             {
                 Label5.Text = "";
+                UserName.Text = email;
                 valid = true;
             }
         }

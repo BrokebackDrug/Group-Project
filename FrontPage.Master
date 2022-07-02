@@ -36,6 +36,10 @@
                            <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
                            <a class="nav-item nav-link last" href="contact.html"><img src="images/shop_icon.png"></a>
                             <a class="nav-item nav-link last" href="Login.aspx"><img src="images/login.png"></a>
+                            <asp:Label ID="Label1" runat="server" Text="Hello" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium"></asp:Label>
+
+                        &nbsp;<asp:Label ID="UserName" runat="server" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium"></asp:Label>
+
                         </div>
                     </div>
                     </nav>

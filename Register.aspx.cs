@@ -29,7 +29,7 @@ namespace Group_Project
         {
             try
             {
-                string strqry = "select * from Customer where USER_EMAIL=@Email";
+                string strqry = "select * from CUSTOMER where USER_EMAIL=@Email";
                 SqlCommand cmd = new SqlCommand(strqry, con);
 
                 cmd.Parameters.AddWithValue("@Email", EMAIL);
@@ -117,6 +117,7 @@ namespace Group_Project
                     Label11.Text = "";
                     valid = true;
                 }
+                //注册成功 成功后操作写这
                 if (valid)
                 {
                     string insertQuery = "insert into CUSTOMER (USER_EMAIL, USER_PASSWORD, USER_FNAME, USER_LNAME, USER_STATUS) values (@EMAIL, @PASSWORD, @FNAME, @LNAME, @STATUS)";
