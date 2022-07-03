@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
+    <Content Include="Details.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\about-img2.png" />
     <Content Include="images\banner.png" />
@@ -95,9 +96,17 @@
     <Content Include="images\shop_icon.png" />
     <Content Include="images\star-icon.png" />
     <Content Include="images\twitter-icon.png" />
+    <Content Include="Man.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrontPage.Master.cs">
       <DependentUpon>FrontPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,6 +120,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Man.aspx.cs">
+      <DependentUpon>Man.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Man.aspx.designer.cs">
+      <DependentUpon>Man.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

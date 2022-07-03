@@ -563,16 +563,15 @@ body{
 	float: left;
 }
 .left_part {
-    width: 60%;
+    width: 19%;
     float: left;
-    padding-left: 15px;
+    padding-left: 2px;
     padding-top: 15px;
 }
 .left_part ul{ margin: 0px; padding: 0px; }
 .left_part li{ float: left; padding-left: 10px; }
-.right_part{ width: 40%; float: left; }
+.right_part{ width: 100%; float: left; }
 .shoes_price{ 
-	width: 100%; 
 	float: left; 
 	font-size: 22pt; 
 	color: #0f0d10; 
@@ -581,7 +580,7 @@ body{
 
 .buy_now_bt{
 	width: 50%;
-	margin: 0 auto;
+	//margin: 0px auto 0 auto;
 	text-align: center;
 }
 .buy_text{
