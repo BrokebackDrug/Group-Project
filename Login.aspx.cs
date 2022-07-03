@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Group_Project
 {
     public partial class Login : System.Web.UI.Page
@@ -100,7 +101,6 @@ namespace Group_Project
            else
             {
                     Label4.Text = "";
-                    valid = true;
             }
 
             if(TextBox2.Text=="")
@@ -117,8 +117,9 @@ namespace Group_Project
             else
             {
                 Label5.Text = "";
-                UserName.Text = email;
-                valid = true;
+                Label userName = (Label)Master.FindControl("UserName");
+                userName.Text = "Hello "+email;
+                //Response.Redirect("Home.aspx");
             }
         }
     }

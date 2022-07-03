@@ -65,7 +65,6 @@ namespace Group_Project
                 else
                 {
                     Label7.Text = "";
-                    valid = true;
                 }
                 if(TextBox2.Text=="")
                 {
@@ -75,7 +74,6 @@ namespace Group_Project
                 else
                 {
                     Label8.Text = "";
-                    valid = true;
                 }
                 if(TextBox3.Text=="")
                 {
@@ -90,7 +88,6 @@ namespace Group_Project
                 else
                 {
                     Label9.Text = "";
-                    valid = true;
                 }
                 if(TextBox4.Text=="")
                 {
@@ -100,7 +97,6 @@ namespace Group_Project
                 else
                 {
                     Label10.Text = "";
-                    valid = true;
                 }
                 if(TextBox5.Text=="")
                 {
@@ -115,7 +111,6 @@ namespace Group_Project
                 else
                 {
                     Label11.Text = "";
-                    valid = true;
                 }
                 //注册成功 成功后操作写这
                 if (valid)
@@ -128,7 +123,7 @@ namespace Group_Project
                     cmd.Parameters.AddWithValue("@LNAME", TextBox2.Text);
                     cmd.Parameters.AddWithValue("@STATUS", 0);
                     cmd.ExecuteNonQuery();
-                    Response.Write("New account created successfully!");   
+                    Response.Redirect("Login.aspx");
                 }
                 con.Close();
             } 
