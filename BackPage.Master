@@ -1,20 +1,19 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontPage.master.cs" Inherits="Group_Project.FrontPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BackPage.master.cs" Inherits="Group_Project.BackPage" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>Master Page Front</title>
-     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Master Page Back</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" href="css/style.css">
-
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-</head> 
- <body class="main-layout">
-     <form id="form1" runat="server">
-	<!-- header section start -->
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- header section start -->
 	<div class="header_section">
 		<div class="container">
 			<div class="row">
@@ -28,14 +27,12 @@
                         </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                           <a class="nav-item nav-link" href="index.html">Home</a>
-                           <a class="nav-item nav-link" href="collection.html">Women</a>
-                           <a class="nav-item nav-link" href="shoes.html">Men</a>
-                           <a class="nav-item nav-link" href="racing boots.html">Shopping Cart</a>
-                           <a class="nav-item nav-link" href="contact.html">Contact</a>
-                           <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
-                           <a class="nav-item nav-link last" href="contact.html"><img src="images/shop_icon.png"></a>
-                            <a class="nav-item nav-link last" href="Login.aspx"><img src="images/login.png"></a>
+                           <a class="nav-item nav-link" href="AdminHome.aspx">Home</a>
+                           <a class="nav-item nav-link" href="#"></a>
+                           <a class="nav-item nav-link" href="AdminAdd.aspx">Add Product</a>
+                           <a class="nav-item nav-link" href="#"></a>
+                           <a class="nav-item nav-link" href="AdminDisplay.aspx">Storage</a>
+
                         </div>
                     </div>
                     </nav>
@@ -51,9 +48,6 @@
             
         </div>
     </div>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-            
-        </asp:ContentPlaceHolder>
 			
 			</div>
 		</div>
@@ -61,12 +55,12 @@
 
 	<!-- header section end -->
 
-
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             
         </asp:ContentPlaceHolder>
     </div>
+
 
 
 
@@ -145,12 +139,6 @@
 
 	<!-- section footer end -->
 	<div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></div>
-
-
-
-
-
-
 
     </form>
 </body>
