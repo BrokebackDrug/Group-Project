@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- New Arrivals section start -->
   <div class="collection_text">Shoes For Men</div>
-     <form id="form1" runat="server">
+     
     <div class="layout_padding gallery_section">
     	<div class="container">
     		<div class="row">
@@ -12,11 +12,9 @@
     				<div class="best_shoes">
     					<p class="best_text">Best Shoes </p>
     					<div class="shoes_icon"><img src="images/shoes-img4.png"></div>
-    					<div class="star_text">
-    						<div class="left_part">
-    							<asp:Label ID="Label1" runat="server" Text="Label" CssClass="shoes_price" Width="185px">$ <span style="color: #ff4e5b;">400</span></asp:Label>
-                                <asp:Button ID="Button1" runat="server" Text="Buy Now" CssClass="buy_now_bt" OnClick="Button1_Click"></asp:Button>
-    						</div>
+    					<div class="star_text">    						
+    						<asp:Label ID="Label1" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">400</span></asp:Label> 
+                            <asp:Button ID="Button1" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button1_Click" Height="40px" Width="60px" style="margin-left:60px;margin-top:5px;"></asp:Button>                      
     					</div>
     				</div>
     			</div>
@@ -24,39 +22,19 @@
     				<div class="best_shoes">
     					<p class="best_text">Best Shoes </p>
     					<div class="shoes_icon"><img src="images/shoes-img5.png"></div>
-    					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">400</span></div>
-    						</div>
+    					<div class="star_text">    						
+    						<asp:Label ID="Label2" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">400</span></asp:Label> 
+                            <asp:Button ID="Button2" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button2_Click" Height="40px" Width="60px" style="margin-left:60px;margin-top:5px;"></asp:Button>                      
     					</div>
-    				</div>
+    					</div>
     			</div>
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Best Shoes </p>
-    					<div class="shoes_icon"><img src="images/shoes-img6.png"></div>
+    					<div class="shoes_icon"><img src="images/shoes-img5.png"></div>
     					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">50</span></div>
-    						</div>
+    						<asp:Label ID="Label3" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">400</span></asp:Label> 
+                            <asp:Button ID="Button3" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button3_Click" Height="40px" Width="60px" style="margin-left:60px;margin-top:5px;"></asp:Button>
     					</div>
     				</div>
     			</div>
@@ -67,18 +45,8 @@
     					<p class="best_text">Sports Shoes</p>
     					<div class="shoes_icon"><img src="images/shoes-img7.png"></div>
     					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">70</span></div>
-    						</div>
+    						<asp:Label ID="Label4" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">400</span></asp:Label> 
+                            <asp:Button ID="Button4" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button4_Click" Height="40px" Width="60px" style="margin-left:60px;margin-top:5px;"></asp:Button>
     					</div>
     				</div>
     			</div>
@@ -87,20 +55,8 @@
     					<p class="best_text">Sports Shoes</p>
     					<div class="shoes_icon"><img src="images/shoes-img8.png"></div>
     					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">100</span></div>
-    						</div>
-    					</div>
+                            <asp:Label ID="Label5" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">400</span></asp:Label> 
+                            <asp:Button ID="Button5" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button5_Click" Height="40px" Width="60px" style="margin-left:60px;margin-top:5px;"></asp:Button>    					</div>
     				</div>
     			</div>
     			<div class="col-sm-4">
@@ -108,25 +64,14 @@
     					<p class="best_text">Sports Shoes</p>
     					<div class="shoes_icon"><img src="images/shoes-img9.png"></div>
     					<div class="star_text">
-    						<div class="left_part">
-    							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    					</ul>
-    						</div>
-    						<div class="right_part">
-    							<div class="shoes_price">$ <span style="color: #ff4e5b;">90</span></div>
-    						</div>
+    						<asp:Label ID="Label6" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">400</span></asp:Label> 
+                            <asp:Button ID="Button6" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button6_Click" Height="40px" Width="60px" style="margin-left:60px;margin-top:5px;"></asp:Button>
     					</div>
     				</div>
     			</div>
     		</div>
     	</div>
 
- </div>
-         </form>
+        
    	<!-- New Arrivals section end -->
 </asp:Content>

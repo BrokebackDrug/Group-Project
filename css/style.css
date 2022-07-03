@@ -534,11 +534,11 @@ body{
 }
 
 .best_shoes {
-    width: 100%;
+    width: 95%;
     float: left;
     background-color: #ffffff;
     height: auto;
-    padding: 20px 20px 20px 0px;
+    padding: 10px 10px 20px 0px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -563,7 +563,7 @@ body{
 	float: left;
 }
 .left_part {
-    width: 19%;
+    width: 56%;
     float: left;
     padding-left: 2px;
     padding-top: 15px;
@@ -572,14 +572,13 @@ body{
 .left_part li{ float: left; padding-left: 10px; }
 .right_part{ width: 100%; float: left; }
 .shoes_price{ 
-	float: left; 
+    float: left; 
 	font-size: 22pt; 
 	color: #0f0d10; 
 	text-align: right;
 }
 
 .buy_now_bt{
-	width: 50%;
 	//margin: 0px auto 0 auto;
 	text-align: center;
 }
