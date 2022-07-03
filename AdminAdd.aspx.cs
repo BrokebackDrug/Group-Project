@@ -11,7 +11,7 @@ namespace Group_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
         }
 
 
@@ -20,16 +20,16 @@ namespace Group_Project
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shorestore;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
-                string insertQuery = "insert into product info(PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_PRICE, PRODUCT_STOCK, PRODUCT_TYPE, PRODUCT_IMAGE) values (@NAME, @DESCRIPTION, @PRICE, @STOCK, @TYPE, @IMAGE)";
+                string insertQuery = "insert into product(PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_PRICE, PRODUCT_STOCK, PRODUCT_TYPE, PRODUCT_IMAGE) values (@NAME, @DESCRIPTION, @PRICE, @STOCK, @TYPE, @IMAGE)";
                 SqlCommand cmd = new SqlCommand(insertQuery, con);
                 cmd.Parameters.AddWithValue("@NAME", TextBox1.Text);
                 cmd.Parameters.AddWithValue("@DESCRIPTION", TextBox2.Text);
                 cmd.Parameters.AddWithValue("@PRICE", TextBox3.Text);
                 cmd.Parameters.AddWithValue("@STOCK", TextBox4.Text);
-                cmd.Parameters.AddWithValue("@TYPE", RadioButtonList1.Text);
-                cmd.Parameters.AddWithValue("@IMAGE", TextBox5.Text);
+                cmd.Parameters.AddWithValue("@TYPE", DropDownList1.Text);
+                cmd.Parameters.AddWithValue("@IMAGE", FileUpload1.FileName);
                 cmd.ExecuteNonQuery();
 
                 Response.Write("Successfully add new product!");
