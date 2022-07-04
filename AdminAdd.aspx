@@ -16,11 +16,13 @@
 
     <h1>Product Price:<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></h1>
     <h1>Product Stock:<asp:TextBox ID="TextBox4" runat="server" TextMode="Number"></asp:TextBox></h1>
-    <h1>Product Type:<asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+    <h1>Product Type:<asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
         <asp:ListItem>Man</asp:ListItem>
         <asp:ListItem>Woman</asp:ListItem>
-        </asp:RadioButtonList></h1>
-    <h1>Product Image:<asp:TextBox ID="TextBox5" runat="server" TextMode="Url"></asp:TextBox></h1>
+        </asp:DropDownList>
+    </h1>
+    <h1>Product Image:<asp:FileUpload ID="FileUpload1" runat="server" />
+    </h1>
     
     <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
 
