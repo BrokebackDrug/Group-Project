@@ -54,9 +54,10 @@ namespace Group_Project
                 //cmd.Parameters.AddWithValue("@USERNAME", XXX.Text);
                 cmd.Parameters.AddWithValue("@PRODUCT_NAME", Label1.Text);
                 cmd.Parameters.AddWithValue("@PRODUCT_PRICE", Label3.Text.Substring(2));
-                cmd.Parameters.AddWithValue("@PRODUCT_IMAGE", "Wait");
+                cmd.Parameters.AddWithValue("@PRODUCT_IMAGE", ProductImage.ImageUrl);
                 cmd.Parameters.AddWithValue("@NUMBER", DropDownList1.SelectedValue);
                 cmd.ExecuteNonQuery();
+                con.Close();
 
 
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('Successfully add to cart!');</script>");
@@ -68,7 +69,6 @@ namespace Group_Project
                 {
                     Response.Redirect("Woman.aspx");
                 }
-                con.Close();
             }
             catch(Exception ex)
             {
