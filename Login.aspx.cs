@@ -117,9 +117,8 @@ namespace Group_Project
             else
             {
                 Label5.Text = "";
-                Label userName = (Label)Master.FindControl("UserName");
-                userName.Text = "Hello "+email;
-                //Response.Redirect("Home.aspx");
+                Session["UserName"] = email;
+               Response.Redirect("Home.aspx");
             }
         }
     }
