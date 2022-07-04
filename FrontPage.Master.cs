@@ -11,7 +11,10 @@ namespace Group_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["UserName"] != null)
+            {
+                UserName.Text = "Hello " + Session["UserName"];
+            }
         }
     }
 }
