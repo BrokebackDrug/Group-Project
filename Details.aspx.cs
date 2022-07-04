@@ -20,13 +20,20 @@ namespace Group_Project
             //DataSet ds = new DataSet();
             SqlDataReader dr = cmd.ExecuteReader();
             String image;
+            decimal price;
+            int stock;
             if (dr.Read())
             {
                 this.Label1.Text = dr.GetString(dr.GetOrdinal("PRODUCT_NAME"));
                 //image = dr.GetString(dr.GetOrdinal("PRODUCT_IMAGE"));
-                image = "shoes-img4.png";
+                image = dr.GetString(dr.GetOrdinal("PRODUCT_IMAGE"));
                 this.ProductImage.ImageUrl = "images/" + image;
-                this.TextBox1.Text = dr.GetString(dr.GetOrdinal("PRODUCT_DESCRIPTION"));
+                this.Label2.Text = dr.GetString(dr.GetOrdinal("PRODUCT_DESCRIPTION"));
+                price = dr.GetDecimal(dr.GetOrdinal("PRODUCT_PRICE"));
+                this.Label3.Text = "$ "+price + "";
+                stock = dr.GetInt32(dr.GetOrdinal("PRODUCT_STOCK"));
+                this.Label4.Text =  stock + " in stock";
+
             }
 
             dr.Close();

@@ -29,25 +29,25 @@ namespace Group_Project
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            Session["ProductID"] = "3";
+            Session["ProductID"] = "4";
             Response.Redirect("Details.aspx");
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            Session["ProductID"] = "4";
+            Session["ProductID"] = "8";
             Response.Redirect("Details.aspx");
         }
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Session["ProductID"] = "5";
+            Session["ProductID"] = "10";
             Response.Redirect("Details.aspx");
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
-            Session["ProductID"] = "6";
+            Session["ProductID"] = "11";
             Response.Redirect("Details.aspx");
         }
     }

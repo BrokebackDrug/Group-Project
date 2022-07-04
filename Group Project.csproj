@@ -73,6 +73,8 @@
     <Content Include="Home.aspx" />
     <Content Include="images\about-img2.png" />
     <Content Include="images\banner.png" />
+    <Content Include="images\css\bootstrap.min.css" />
+    <Content Include="images\css\style.css" />
     <Content Include="images\email-icon.png" />
     <Content Include="images\fb-icon.png" />
     <Content Include="images\footer-logo.png" />
@@ -80,6 +82,12 @@
     <Content Include="images\in-icon.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\map-icon.png" />
+    <Content Include="images\men-01.jpg" />
+    <Content Include="images\men-02.jpg" />
+    <Content Include="images\men-03.jpg" />
+    <Content Include="images\men-04.jpg" />
+    <Content Include="images\men-05.jpg" />
+    <Content Include="images\men-06.jpg" />
     <Content Include="images\phone-icon.png" />
     <Content Include="images\running-shoes.png" />
     <Content Include="images\search_icon.png" />
@@ -96,6 +104,12 @@
     <Content Include="images\shop_icon.png" />
     <Content Include="images\star-icon.png" />
     <Content Include="images\twitter-icon.png" />
+    <Content Include="images\women-01.jpg" />
+    <Content Include="images\women-02.jpg" />
+    <Content Include="images\women-03.jpg" />
+    <Content Include="images\women-04.jpg" />
+    <Content Include="images\women-05.jpg" />
+    <Content Include="images\women-06.jpg" />
     <Content Include="Man.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
