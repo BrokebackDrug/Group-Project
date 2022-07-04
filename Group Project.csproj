@@ -99,6 +99,8 @@
     <Content Include="images\star-icon.png" />
     <Content Include="images\twitter-icon.png" />
     <Content Include="Login.aspx" />
+    <Content Include="Manshoes.aspx" />
+    <Content Include="ShoppingCart.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -151,7 +153,21 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manshoes.aspx.cs">
+      <DependentUpon>Manshoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manshoes.aspx.designer.cs">
+      <DependentUpon>Manshoes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrontPage.Master" />
