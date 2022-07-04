@@ -149,7 +149,8 @@ a,
 
 img {
      max-width: 100%;
-     }
+     height: auto;
+}
 
  :focus {
      outline: 0;
@@ -533,11 +534,11 @@ body{
 }
 
 .best_shoes {
-    width: 95%;
+    width: 100%;
     float: left;
     background-color: #ffffff;
     height: auto;
-    padding: 10px 10px 20px 0px;
+    padding: 20px 20px 20px 0px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -553,7 +554,6 @@ body{
 .shoes_icon{
 	width: 100%;
 	float: left;
-    margin-left:5px;
 	text-align: center;
 	min-height: 220px;
 }
@@ -563,23 +563,25 @@ body{
 	float: left;
 }
 .left_part {
-    width: 56%;
+    width: 60%;
     float: left;
-    padding-left: 2px;
+    padding-left: 15px;
     padding-top: 15px;
 }
 .left_part ul{ margin: 0px; padding: 0px; }
 .left_part li{ float: left; padding-left: 10px; }
-.right_part{ width: 100%; float: left; }
+.right_part{ width: 40%; float: left; }
 .shoes_price{ 
-    float: left; 
+	width: 100%; 
+	float: left; 
 	font-size: 22pt; 
 	color: #0f0d10; 
 	text-align: right;
 }
 
 .buy_now_bt{
-	//margin: 0px auto 0 auto;
+	width: 50%;
+	margin: 0 auto;
 	text-align: center;
 }
 .buy_text{
