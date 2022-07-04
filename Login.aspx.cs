@@ -53,6 +53,30 @@ namespace Group_Project
                 return false;
             }
         }
+        //select user status to check if it is the admin
+        protected bool selectStatus(string Email)
+        {
+            try
+            {
+                string strqry = "select USER_STATUS from CUSTOMER where USER_EMAIL=@Email";
+
+                SqlCommand cmd = new SqlCommand(strqry, con);
+                cmd.Parameters.AddWithValue("@Email", Email);
+                SqlDataReader r = cmd.ExecuteReader();
+                r.Read();
+                int statusColPos = r.GetOrdinal("USER_STATUS");
+                int status = (int)r.GetDecimal(statusColPos); 
+                if (status == 0)
+                    return false;
+                else
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Response.Write("error" + e.ToString());
+                return false;
+            }
+        }
         //check if the password is consistent
         protected bool check(string Email, string Password)
         {
@@ -87,28 +111,28 @@ namespace Group_Project
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if(TextBox1.Text=="")
+            if (TextBox1.Text == "")
             {
                 Label4.Text = "THE E-MAIL ADDRESS FIELD IS REQUIRED.";
                 valid = false;
             }
-            else if(!search(TextBox1.Text))
+            else if (!search(TextBox1.Text))
             {
-              
-                    Label4.Text = "THE USER IS NOT REGISTERED.";
-                    valid = false;
+
+                Label4.Text = "THE USER IS NOT REGISTERED.";
+                valid = false;
             }
-           else
+            else
             {
-                    Label4.Text = "";
+                Label4.Text = "";
             }
 
-            if(TextBox2.Text=="")
+            if (TextBox2.Text == "")
             {
-                    Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
-                    valid = false;
+                Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
+                valid = false;
             }
-            else if(!check(TextBox1.Text,TextBox2.Text))
+            else if (!check(TextBox1.Text, TextBox2.Text))
             {
                 Label5.Text = "THE PASSWORD IS NOT CORRECT";
                 valid = false;
@@ -118,7 +142,11 @@ namespace Group_Project
             {
                 Label5.Text = "";
                 Session["UserName"] = email;
-               Response.Redirect("Home.aspx");
+                if (selectStatus(email))
+                    Response.Redirect("AdminHome.aspx");
+                else
+                    Response.Redirect("Home.aspx");
+
             }
         }
     }
