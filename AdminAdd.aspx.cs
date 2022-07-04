@@ -11,7 +11,7 @@ namespace Group_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
         }
 
 
@@ -20,7 +20,7 @@ namespace Group_Project
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
                 con.Open();
                 string insertQuery = "insert into product(PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_PRICE, PRODUCT_STOCK, PRODUCT_TYPE, PRODUCT_IMAGE) values (@NAME, @DESCRIPTION, @PRICE, @STOCK, @TYPE, @IMAGE)";
                 SqlCommand cmd = new SqlCommand(insertQuery, con);

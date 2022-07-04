@@ -13,7 +13,8 @@ namespace Group_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
+            //SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
             con.Open();
             String initialization = "select * from product where PRODUCT_ID ='" + Session["ProductID"] + "'";
             SqlCommand cmd = new SqlCommand(initialization, con);
@@ -44,7 +45,7 @@ namespace Group_Project
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
                 String insertOrder = "insert into carts (ORDER_USERNAME, ORDER_PRODUCT_NAME, ORDER_PRODUCT_PRICE, ORDER_PRODUCT_IMAGE, ORDER_NUMBER) " +
                     "values (@USERNAME, @PRODUCT_NAME, @PRODUCT_PRICE, @PRODUCT_IMAGE, @NUMBER)";
