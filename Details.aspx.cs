@@ -61,7 +61,7 @@ namespace Group_Project
 
 
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('Successfully add to cart!');</script>");
-                if (int.Parse((String)Session["ProductID"]) <= 8)
+                if (int.Parse((String)Session["ProductID"]) <=4 || (8<=int.Parse((String)Session["ProductID"]) && int.Parse((String)Session["ProductID"]) <= 11))
                 {
                     Response.Redirect("Man.aspx");
                 }
