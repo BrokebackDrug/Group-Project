@@ -21,7 +21,7 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Air Jordan 1 Zoom Cmft</p>
-    					<div class="shoes_icon"><img src="images/men-02.jpg"></div>
+    					<div class="shoes_icon"><img src="images/men-03.jpg"></div>
     					<div class="star_text">    						
     						<asp:Label ID="Label2" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">159</span></asp:Label> 
                             <asp:Button ID="Button2" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button2_Click" Height="40px" Width="60px" style="margin-left:100px;margin-top:5px;"></asp:Button>                      
@@ -31,7 +31,7 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Nike Dunk Low</p>
-    					<div class="shoes_icon"><img src="images/men-03.jpg"></div>
+    					<div class="shoes_icon"><img src="images/men-02.jpg"></div>
     					<div class="star_text">
     						<asp:Label ID="Label3" runat="server" Text="Label" CssClass="shoes_price" Width="120px">$ <span style="color: #ff4e5b;">215</span></asp:Label> 
                             <asp:Button ID="Button3" runat="server" Text="View" CssClass="buy_now_bt" OnClick="Button3_Click" Height="40px" Width="60px" style="margin-left:100px;margin-top:5px;"></asp:Button>

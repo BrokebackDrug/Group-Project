@@ -48,7 +48,7 @@
                 </asp:DropDownList>
                 <br />
                 <br />
-                <asp:Button ID="Button1" runat="server" Text="Add To Cart" />
+                <asp:Button ID="Button1" runat="server" Text="Add To Cart" OnClick="Button1_Click" />
 
             </div>
             </div>

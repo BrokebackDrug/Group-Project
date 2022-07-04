@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace Group_Project
 {
@@ -11,7 +12,7 @@ namespace Group_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
         }
     }
 }
