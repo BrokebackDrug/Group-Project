@@ -32,7 +32,7 @@ namespace Group_Project
                 cmd.Parameters.AddWithValue("@IMAGE", FileUpload1.FileName);
                 cmd.ExecuteNonQuery();
 
-                Response.Write("Successfully add new product!");
+                //Response.Write("Successfully add new product!");
                 con.Close();
             }
             catch (Exception ex)
