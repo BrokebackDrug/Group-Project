@@ -44,7 +44,7 @@ namespace Group_Project
         {
             try
             {
-                name = "Bob";
+                name = "DMT1909203@xmu.edu.my";
                 SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
                 String selectOrder = "select * from carts where ORDER_USERNAME = '" + name + "'"
@@ -72,7 +72,7 @@ namespace Group_Project
                     SqlCommand cmd2 = new SqlCommand(insertOrder, con);
                     dr.Close();
 
-                    cmd2.Parameters.AddWithValue("@USERNAME", "Bob");
+                    cmd2.Parameters.AddWithValue("@USERNAME", "DMT1909203@xmu.edu.my");
                     //cmd.Parameters.AddWithValue("@USERNAME", XXX.Text);
                     cmd2.Parameters.AddWithValue("@PRODUCT_NAME", Label1.Text);
                     cmd2.Parameters.AddWithValue("@PRODUCT_PRICE", Label3.Text.Substring(2));
