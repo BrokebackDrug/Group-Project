@@ -14,8 +14,8 @@
             <asp:BoundField DataField="PRODUCT_STOCK" HeaderText="PRODUCT_STOCK" SortExpression="PRODUCT_STOCK" />
             <asp:BoundField DataField="PRODUCT_TYPE" HeaderText="PRODUCT_TYPE" SortExpression="PRODUCT_TYPE" />
             <asp:BoundField DataField="PRODUCT_IMAGE" HeaderText="PRODUCT_IMAGE" SortExpression="PRODUCT_IMAGE" />
-            <asp:CommandField ButtonType="Button" ShowEditButton="True" />
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
+            <asp:CommandField ButtonType="Button" ShowEditButton="True" CancelText="cancel" DeleteText="delete" EditText="edit" UpdateText="update" />
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" DeleteText="delete" />
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
