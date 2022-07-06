@@ -48,18 +48,8 @@ namespace Group_Project
                 Label1.Text = "The cart is empty now";
                 Label3.Text = "0";
             }
-
-
-            if (true)
-            {
-                Bind();
-            }
-
         }
 
-        public void Bind() { 
-            ///empty
-        }
 
         protected void Clear_cart(object sender, EventArgs e)
         {
@@ -83,11 +73,6 @@ namespace Group_Project
                 Response.Write("error" + ex.ToString());
             }
 
-
-        }
-
-        protected void GridView1_RowDeleting()
-        {
 
         }
 

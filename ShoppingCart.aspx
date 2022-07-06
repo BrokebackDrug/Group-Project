@@ -40,7 +40,7 @@
                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True" DeleteText="Remove" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString3 %>" 
+        <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString %>" 
             SelectCommand="SELECT * FROM [carts] WHERE ORDER_USERNAME = @_USERNAME" DeleteCommand="DELETE FROM [carts] WHERE [ORDER_ID] = @ORDER_ID">
             <DeleteParameters>
                 <asp:Parameter Name="ORDER_ID" Type="Int32" />

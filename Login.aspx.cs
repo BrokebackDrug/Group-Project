@@ -18,7 +18,7 @@ namespace Group_Project
         {
             try
             {
-                con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
             }
             catch (Exception ex)
