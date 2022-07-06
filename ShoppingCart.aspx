@@ -16,7 +16,7 @@
         <div class="cart_rows">
         <asp:Label ID="Label1" runat="server" Text=" All the orders are displayed here " Font-Bold="True" Font-Size="Large"></asp:Label>
     
-        <asp:GridView ID="GridView1" runat="server" cssClass="mGrid" AutoGenerateColumns="False" DataSourceID="SqlDataSource_Cart" DataKeyNames="ORDER_ID" OnRowDeleted="GridView1_RowDeleted1" Width="95%">
+        <asp:GridView ID="GridView1" runat="server" cssClass="mGrid" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" DataKeyNames="ORDER_ID" OnRowDeleted="GridView1_RowDeleted1" Width="95%">
             <Columns>
                 <asp:BoundField DataField="ORDER_PRODUCT_NAME" HeaderText="Product Name" ReadOnly="True" SortExpression="ORDER_PRODUCT_NAME" />
                 <asp:BoundField DataField="ORDER_PRODUCT_PRICE" HeaderText="Product Price" ReadOnly="True" SortExpression="ORDER_PRODUCT_PRICE" />
@@ -40,6 +40,8 @@
                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True" DeleteText="Remove" />
             </Columns>
         </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ShoeStoreConnectionString4 %>" SelectCommand="SELECT * FROM [carts]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
         <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString3 %>" 
             SelectCommand="SELECT * FROM [carts] WHERE ORDER_USERNAME = @_USERNAME" DeleteCommand="DELETE FROM [carts] WHERE [ORDER_ID] = @ORDER_ID">
             <DeleteParameters>

@@ -15,7 +15,7 @@ namespace Group_Project
         String name;
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
             //SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
             con.Open();
             String initialization = "select * from product where PRODUCT_ID ='" + Session["ProductID"] + "'";
