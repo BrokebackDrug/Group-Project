@@ -27,17 +27,7 @@ namespace Group_Project
 
         public void Bind()
         {
-            //string sqlstr = "select * from product";
-            //sqlcon = new SqlConnection(strCon);
-            //SqlDataAdapter myda = new SqlDataAdapter(sqlstr, sqlcon);
-           // DataSet myds = new DataSet();
-            //sqlcon.Open();
-            //myda.Fill(myds, "表");
-            //GridView1.DataSource = myds;
-            //GridView1.DataKeyNames = new string[] { "id" };//主键
-            //GridView1.DataBind();
-            //sqlcon.Close();
-            
+
                 con.Open();
                 string SelectQuery = "select * from product";
                 //SqlCommand cmd = new SqlCommand(selectQuery, con);

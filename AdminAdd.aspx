@@ -1,16 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BackPage.Master" AutoEventWireup="true" CodeBehind="AdminAdd.aspx.cs" Inherits="Group_Project.AdminAdd" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            left: 0px;
-            top: 0px;
-        }
-    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <div>
     <asp:Panel ID="Panel1" runat="server"  BackColor="#FFEAFF"  Width="800px" style="margin-left:32%">
-       <center><b> <h1>Add Product</h1></b></center>
+       <center> <h1><b>Add Product</b></h1></center>
         <div style="margin-left:10%">
      <br /><h1 class="auto-style1">Product Name: &nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TextBox1" runat="server" Width="417px"></asp:TextBox>
@@ -41,11 +36,12 @@
     <h1>Product Image:&nbsp;<asp:FileUpload ID="FileUpload1" runat="server" />
         <br />
     </h1>
+            
     <center>
-    <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" BackColor="Black" Font-Bold="True" Font-Size="Larger" ForeColor="White" />
+    <asp:Button ID="Button1"  runat="server" Text="Submit" OnClick="Button1_Click" BackColor="Black" Font-Bold="True" Font-Size="XX-Large" ForeColor="White" Height="97px" Width="199px" />
     </center>
     </div>
     </asp:Panel>
-
+    </div>
 
 </asp:Content>
