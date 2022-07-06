@@ -15,8 +15,9 @@ namespace Group_Project
         String name;
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
+            //SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
             //SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
             con.Open();
             String initialization = "select * from product where PRODUCT_ID ='" + Session["ProductID"] + "'";
             SqlCommand cmd = new SqlCommand(initialization, con);
@@ -46,7 +47,8 @@ namespace Group_Project
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
+                //SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
                 String selectOrder = "select * from carts where ORDER_USERNAME = '" + name + "'"
                     + " and ORDER_PRODUCT_NAME = '" + Label1.Text + "'";

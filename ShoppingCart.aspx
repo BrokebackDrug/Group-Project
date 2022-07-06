@@ -16,7 +16,8 @@
         <div class="cart_rows">
         <asp:Label ID="Label1" runat="server" Text=" All the orders are displayed here " Font-Bold="True" Font-Size="Large"></asp:Label>
     
-        <asp:GridView ID="GridView1" runat="server" cssClass="mGrid" AutoGenerateColumns="False" DataSourceID="SqlDataSource_Cart" DataKeyNames="ORDER_ID" OnRowDeleted="GridView1_RowDeleted1" Width="95%">
+        <asp:GridView ID="GridView1" runat="server" cssClass="mGrid" AutoGenerateColumns="False" DataSourceID="SqlDataSource_Cart" DataKeyNames="ORDER_ID" OnRowDeleted="GridView1_RowDeleted1" Width="95%" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#CCCCCC" />
             <Columns>
                 <asp:BoundField DataField="ORDER_PRODUCT_NAME" HeaderText="Product Name" ReadOnly="True" SortExpression="ORDER_PRODUCT_NAME" />
                 <asp:BoundField DataField="ORDER_PRODUCT_PRICE" HeaderText="Product Price" ReadOnly="True" SortExpression="ORDER_PRODUCT_PRICE" />
@@ -39,15 +40,17 @@
                 </asp:TemplateField>
                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True" DeleteText="Remove" />
             </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString3 %>" 
-            SelectCommand="SELECT * FROM [carts] WHERE ORDER_USERNAME = @_USERNAME" DeleteCommand="DELETE FROM [carts] WHERE [ORDER_ID] = @ORDER_ID">
-            <DeleteParameters>
-                <asp:Parameter Name="ORDER_ID" Type="Int32" />
-            </DeleteParameters>
-            <SelectParameters>
-                <asp:SessionParameter DefaultValue="DMT1909203@xmu.edu.my" Name="_USERNAME" SessionField="UserName" />
-            </SelectParameters>
+        <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString2 %>" 
+            SelectCommand="SELECT * FROM [carts]">
         </asp:SqlDataSource>
 
         <asp:Label ID="Label2" runat="server" Text="Total Price: "></asp:Label>
