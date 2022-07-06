@@ -107,26 +107,26 @@ namespace Group_Project
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (TextBox1.Text == "")
+            if(TextBox1.Text=="")
             {
                 Label4.Text = "THE E-MAIL ADDRESS FIELD IS REQUIRED.";
                 valid = false;
             }
-            else if (!search(TextBox1.Text))
+            else if(!search(TextBox1.Text))
             {
-
-                Label4.Text = "THE USER IS NOT REGISTERED.";
-                valid = false;
+              
+                    Label4.Text = "THE USER IS NOT REGISTERED.";
+                    valid = false;
             }
-            else
+           else
             {
-                Label4.Text = "";
+                    Label4.Text = "";
             }
 
-            if (TextBox2.Text == "")
+            if(TextBox2.Text=="")
             {
-                Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
-                valid = false;
+                    Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
+                    valid = false;
             }
             else if ( !check(TextBox1.Text, TextBox2.Text)&&search(TextBox1.Text))
             {
@@ -138,11 +138,7 @@ namespace Group_Project
             { 
                 Label5.Text = "";
                 Session["UserName"] = email;
-                if (selectStatus(email))
-                    Response.Redirect("AdminHome.aspx");
-                else
-                    Response.Redirect("Home.aspx");
-
+               Response.Redirect("Home.aspx");
             }
         }
     }
