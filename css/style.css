@@ -323,13 +323,19 @@ body{
 .slide-wrapper{display:inline;}
 .slide-wrapper .container{padding:0;}
 
+.cart_rows{
+    color:azure;
+}
 
 /*------------------------------ vertical bootstrap slider----------------------------*/
-
-.carousel-inner> .carousel-item.carousel-item-next ,
-.carousel-inner > .carousel-item.active.carousel-item-right{ 
-    transform: translate3d(0, 100%, 0); -webkit-transform: translate3d(0, 100%, 0); -ms-transform: translate3d(0, 100%, 0); -moz-transform: translate3d(0, 100%, 0); -o-transform: translate3d(0, 100%, 0);  top: 0;
-    
+.carousel-inner > .carousel-item.carousel-item-next,
+.carousel-inner > .carousel-item.active.carousel-item-right {
+    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    top: 0;
 }
 .carousel-inner > .carousel-item.carousel-item-prev ,
 .carousel-inner > .carousel-item.active.carousel-item-left{ 
