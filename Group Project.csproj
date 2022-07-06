@@ -102,9 +102,11 @@
     <Content Include="images\star-icon.png" />
     <Content Include="images\twitter-icon.png" />
     <Content Include="Login.aspx" />
+    <Content Include="Man.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="ShoppingCart.aspx" />
     <Content Include="Web.config" />
+    <Content Include="woman.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminAdd.aspx.cs">
@@ -163,6 +165,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Man.aspx.cs">
+      <DependentUpon>Man.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Man.aspx.designer.cs">
+      <DependentUpon>Man.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -177,6 +186,13 @@
     </Compile>
     <Compile Include="ShoppingCart.aspx.designer.cs">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="woman.aspx.cs">
+      <DependentUpon>woman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="woman.aspx.designer.cs">
+      <DependentUpon>woman.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
