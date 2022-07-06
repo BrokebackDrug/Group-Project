@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace Group_Project
 {
@@ -16,7 +17,7 @@ namespace Group_Project
         {
             try
             {
-                con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
             }
             catch (Exception ex)
@@ -123,6 +124,7 @@ namespace Group_Project
                     cmd.Parameters.AddWithValue("@LNAME", TextBox2.Text);
                     cmd.Parameters.AddWithValue("@STATUS", 0);
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Register successfully!");
                     Response.Redirect("Login.aspx");
                 }
                 con.Close();

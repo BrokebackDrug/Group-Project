@@ -18,7 +18,7 @@ namespace Group_Project
         {
             try
             {
-                con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=ShoeStore;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
             }
             catch (Exception ex)
@@ -137,7 +137,7 @@ namespace Group_Project
                 Label5.Text = "THE PASSWORD IS NOT CORRECT";
                 valid = false;
             }
-            //登录成功 相应操作写这
+            //log in successfully
             else
             {
                 Label5.Text = "";
