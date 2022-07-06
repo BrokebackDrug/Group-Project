@@ -18,8 +18,7 @@ namespace Group_Project
         {
             try
             {
-                //con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
-                con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
                 con.Open();
             }
             catch (Exception ex)
@@ -50,7 +49,29 @@ namespace Group_Project
             }
             catch (Exception ex)
             {
-                Response.Write("error" + ex.ToString());
+                return false;
+            }
+        }
+        //select user status to check if it is the admin
+        protected bool selectStatus(string Email)
+        {
+            try
+            {
+                string strqry = "select USER_STATUS from CUSTOMER where USER_EMAIL=@Email";
+
+                SqlCommand cmd = new SqlCommand(strqry, con);
+                cmd.Parameters.AddWithValue("@Email", Email);
+                SqlDataReader r = cmd.ExecuteReader();
+                r.Read();
+                int statusColPos = r.GetOrdinal("USER_STATUS");
+                int status = (int)r.GetDecimal(statusColPos); 
+                if (status == 0)
+                    return false;
+                else
+                    return true;
+            }
+            catch (Exception e)
+            {
                 return false;
             }
         }
@@ -81,45 +102,47 @@ namespace Group_Project
             }
             catch(Exception ex)
             {
-                Response.Write("error"+ex.ToString());
                 return false;
             }
-
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if(TextBox1.Text=="")
+            if (TextBox1.Text == "")
             {
                 Label4.Text = "THE E-MAIL ADDRESS FIELD IS REQUIRED.";
                 valid = false;
             }
-            else if(!search(TextBox1.Text))
+            else if (!search(TextBox1.Text))
             {
-              
-                    Label4.Text = "THE USER IS NOT REGISTERED.";
-                    valid = false;
+
+                Label4.Text = "THE USER IS NOT REGISTERED.";
+                valid = false;
             }
-           else
+            else
             {
-                    Label4.Text = "";
+                Label4.Text = "";
             }
 
-            if(TextBox2.Text=="")
+            if (TextBox2.Text == "")
             {
-                    Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
-                    valid = false;
+                Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
+                valid = false;
             }
-            else if(!check(TextBox1.Text,TextBox2.Text))
+            else if ( !check(TextBox1.Text, TextBox2.Text)&&search(TextBox1.Text))
             {
                 Label5.Text = "THE PASSWORD IS NOT CORRECT";
                 valid = false;
             }
-            //登录成功 相应操作写这
-            else
-            {
+            //log in successfully
+            if (valid)
+            { 
                 Label5.Text = "";
                 Session["UserName"] = email;
-               Response.Redirect("Home.aspx");
+                if (selectStatus(email))
+                    Response.Redirect("AdminHome.aspx");
+                else
+                    Response.Redirect("Home.aspx");
+
             }
         }
     }

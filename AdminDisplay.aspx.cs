@@ -13,7 +13,7 @@ namespace Group_Project
 {
      public partial class AdminDisplay : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             
