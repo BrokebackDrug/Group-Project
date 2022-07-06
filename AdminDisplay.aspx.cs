@@ -30,19 +30,12 @@ namespace Group_Project
 
                 con.Open();
                 string SelectQuery = "select * from product";
-                //SqlCommand cmd = new SqlCommand(selectQuery, con);
-
                 SqlDataAdapter myda = new SqlDataAdapter(SelectQuery, con);
                 DataSet myds = new DataSet();
                 myda.Fill(myds, "product");
-                //GridView1.DataSource = myds;
                 GridView1.DataKeyNames = new string[] { "PRODUCT_ID" };//primary kay
                 GridView1.DataBind();
-                con.Close();
-                //GridView1.EditIndex = -1;
-            
-
-
+                con.Close();      
         }
 
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
@@ -60,8 +53,6 @@ namespace Group_Project
             {
                 //SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
-
-
                 string updateQuery = "update product set PRODUCT_NAME='" + ((TextBox)(GridView1.Rows[e.RowIndex].Cells[1].Controls[0])).Text.ToString().Trim()
                     + "',PRODUCT_DESCRIPTION='" + ((TextBox)(GridView1.Rows[e.RowIndex].Cells[2].Controls[0])).Text.ToString().Trim() 
                     + "',PRODUCT_PRICE='" + ((TextBox)(GridView1.Rows[e.RowIndex].Cells[3].Controls[0])).Text.ToString().Trim() 
@@ -70,9 +61,7 @@ namespace Group_Project
                     + "',PRODUCT_IMAGE='" + ((TextBox)(GridView1.Rows[e.RowIndex].Cells[6].Controls[0])).Text.ToString().Trim()
                     + "' where PRODUCT_ID='" + GridView1.DataKeys[e.RowIndex].Value.ToString() + "'";
                 SqlCommand cmd = new SqlCommand(updateQuery, con);
-
                 cmd.ExecuteNonQuery();
-
                 //Response.Write("Update successful!");
                 con.Close();
                 GridView1.EditIndex = -1;
@@ -98,11 +87,8 @@ namespace Group_Project
                 //SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
                 string deleteQuery = "delete from product where PRODUCT_ID = '" + GridView1.DataKeys[e.RowIndex].Value.ToString() + "'";
-
                 SqlCommand cmd = new SqlCommand(deleteQuery, con);
-
                 cmd.ExecuteNonQuery();
-
                 //Response.Write("Successfully delete the row");
                 con.Close();
             }
