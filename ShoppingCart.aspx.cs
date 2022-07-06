@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows;
+using System.Windows.Forms;
 
 namespace Group_Project
 {
@@ -18,7 +18,7 @@ namespace Group_Project
 
         Hashtable ht;
         //DataTable dt;
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
 
         SqlCommand cmd;
         SqlDataReader sdr;
@@ -80,7 +80,7 @@ namespace Group_Project
         {
             try
             {
-                string id = ((Button)sender).CommandArgument;
+                string id = ((System.Web.UI.WebControls.Button)sender).CommandArgument;
                 int num = getNumber(id) + 1;
 
                 if(num < 11)
@@ -113,7 +113,7 @@ namespace Group_Project
         {
             try
             {
-                string id = ((Button)sender).CommandArgument;
+                string id = ((System.Web.UI.WebControls.Button)sender).CommandArgument;
                 int num = getNumber(id) - 1;
 
                 if(num > 0)
