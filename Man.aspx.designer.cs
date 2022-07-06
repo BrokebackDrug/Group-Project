@@ -15,13 +15,13 @@ namespace Group_Project
     {
 
         /// <summary>
-        /// Label1 control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
         /// Button1 control.
@@ -33,13 +33,13 @@ namespace Group_Project
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Label2 control.
+        /// Label21 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Label21;
 
         /// <summary>
         /// Button2 control.
@@ -51,13 +51,13 @@ namespace Group_Project
         protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
-        /// Label3 control.
+        /// Label31 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label Label31;
 
         /// <summary>
         /// Button3 control.
@@ -69,13 +69,13 @@ namespace Group_Project
         protected global::System.Web.UI.WebControls.Button Button3;
 
         /// <summary>
-        /// Label4 control.
+        /// Label41 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label Label41;
 
         /// <summary>
         /// Button4 control.
@@ -87,13 +87,13 @@ namespace Group_Project
         protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
-        /// Label5 control.
+        /// Label51 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label Label51;
 
         /// <summary>
         /// Button5 control.
@@ -105,13 +105,13 @@ namespace Group_Project
         protected global::System.Web.UI.WebControls.Button Button5;
 
         /// <summary>
-        /// Label6 control.
+        /// Label61 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label Label61;
 
         /// <summary>
         /// Button6 control.
