@@ -2,7 +2,7 @@
     AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="Group_Project.ShoppingCart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <center>This is the home page of the website.</center>
+    
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -14,9 +14,9 @@
         <div class ="container">
 
         <div class="cart_rows">
-        <asp:Label ID="Label1" runat="server" Text="Label"> All the orders are displayed here </asp:Label>
+        <asp:Label ID="Label1" runat="server" Text=" All the orders are displayed here " Font-Bold="True" Font-Size="Large"></asp:Label>
     
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource_Cart" DataKeyNames="ORDER_ID" OnRowDeleted="GridView1_RowDeleted1">
+        <asp:GridView ID="GridView1" runat="server" cssClass="mGrid" AutoGenerateColumns="False" DataSourceID="SqlDataSource_Cart" DataKeyNames="ORDER_ID" OnRowDeleted="GridView1_RowDeleted1" Width="95%">
             <Columns>
                 <asp:BoundField DataField="ORDER_PRODUCT_NAME" HeaderText="Product Name" ReadOnly="True" SortExpression="ORDER_PRODUCT_NAME" />
                 <asp:BoundField DataField="ORDER_PRODUCT_PRICE" HeaderText="Product Price" ReadOnly="True" SortExpression="ORDER_PRODUCT_PRICE" />
@@ -34,14 +34,14 @@
                 <asp:TemplateField HeaderText="Image">
                     <ItemTemplate>
                         <asp:Image ID="img1" ImageUrl='<%#Eval("ORDER_PRODUCT_IMAGE") %>'
-                            runat="server" AlternateText="image lost" Width="40" Height="40" />
+                            runat="server" AlternateText="image lost" Width="75" Height="75" />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True" DeleteText="Remove" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString %>" 
-            SelectCommand="SELECT * FROM [carts] WHERE ORDER_USERNAME = @_USERNAME" DeleteCommand="DELETE FROM [carts] WHERE [ORDER_ID] = @ORDER_ID" ProviderName="<%$ ConnectionStrings:shoestoreConnectionString.ProviderName %>">
+        <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString3 %>" 
+            SelectCommand="SELECT * FROM [carts] WHERE ORDER_USERNAME = @_USERNAME" DeleteCommand="DELETE FROM [carts] WHERE [ORDER_ID] = @ORDER_ID">
             <DeleteParameters>
                 <asp:Parameter Name="ORDER_ID" Type="Int32" />
             </DeleteParameters>

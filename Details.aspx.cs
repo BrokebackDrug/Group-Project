@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows;
 
 namespace Group_Project
 {
@@ -15,7 +16,7 @@ namespace Group_Project
         protected void Page_Load(object sender, EventArgs e)
         {
             name = (String)Session["UserName"];
-            SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
             con.Open();
             String initialization = "select * from product where PRODUCT_ID ='" + Session["ProductID"] + "'";
             SqlCommand cmd = new SqlCommand(initialization, con);
@@ -45,7 +46,7 @@ namespace Group_Project
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
                 String selectOrder = "select * from carts where ORDER_USERNAME = '" + name + "'"
                     + " and ORDER_PRODUCT_NAME = '" + Label1.Text + "'";
@@ -84,11 +85,12 @@ namespace Group_Project
                 con.Close();
                 if (insertNew)
                 {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('Successfully add to cart!');</script>");
+                    MessageBox.Show("Successfully add to cart!");
+                    
                 }
                 else
                 {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('Successfully update the cart!');</script>");
+                    MessageBox.Show("Successfully update the cart!");
                 }
 
                 if (int.Parse((String)Session["ProductID"]) <=4 || (8<=int.Parse((String)Session["ProductID"]) && int.Parse((String)Session["ProductID"]) <= 11))

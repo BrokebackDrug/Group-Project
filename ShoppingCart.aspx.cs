@@ -18,7 +18,7 @@ namespace Group_Project
 
         Hashtable ht;
         //DataTable dt;
-        SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
 
         SqlCommand cmd;
         SqlDataReader sdr;
