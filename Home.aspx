@@ -5,7 +5,7 @@
     <center><h1>This is the home page of the website.</h1></center>
                 <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="container">
                     <div class="row">
 					
 					<div class="col-sm-5">
@@ -13,8 +13,8 @@
 							<h1 class="banner_text">New Running Shoes </h1>
 							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
 							<p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
+							<button class="buy_bt"><a href="man.aspx">Man</a></button>
+							<button class="more_bt"><a href="woman.aspx">Woman</a> </button>
 						</div>
 					</div>
 					<div class="col-sm-5">
@@ -25,7 +25,7 @@
             </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-		<!-- new collection section start -->
+        <!-- new collection section start -->
     <div class="layout_padding collection_section">
     	<div class="container">
     	    <h1 class="new_text"><strong>New  Collection</strong></h1>
@@ -48,7 +48,6 @@
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button class="seemore_bt">See More</button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
