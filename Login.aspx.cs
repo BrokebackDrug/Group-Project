@@ -137,7 +137,7 @@ namespace Group_Project
                 Label5.Text = "THE PASSWORD IS NOT CORRECT";
                 valid = false;
             }
-            //登录成功 相应操作写这
+            //log in successfully
             else
             {
                 Label5.Text = "";
