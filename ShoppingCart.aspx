@@ -25,7 +25,7 @@
                         <asp:Button ID="ButtonMinus" runat="server" Text="-" CommandArgument='<%# Eval("ORDER_ID") %>' OnClick="Minus_One"/>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:BoundField DataField="ORDER_NUMBER" HeaderText="Number" SortExpression="ORDER_NUMBER" />
+                <asp:BoundField DataField="ORDER_NUMBER" HeaderText="Quantity" SortExpression="ORDER_NUMBER" />
                 <asp:TemplateField HeaderText=">">
                     <ItemTemplate>
                         <asp:Button ID="ButtonAdd" runat="server" Text="+" CommandArgument='<%# Eval("ORDER_ID") %>' OnClick="Add_One"/>
