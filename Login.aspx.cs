@@ -49,7 +49,6 @@ namespace Group_Project
             }
             catch (Exception ex)
             {
-                Response.Write("error" + ex.ToString());
                 return false;
             }
         }
@@ -73,7 +72,6 @@ namespace Group_Project
             }
             catch (Exception e)
             {
-                Response.Write("error" + e.ToString());
                 return false;
             }
         }
@@ -104,10 +102,8 @@ namespace Group_Project
             }
             catch(Exception ex)
             {
-                Response.Write("error"+ex.ToString());
                 return false;
             }
-
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -132,14 +128,14 @@ namespace Group_Project
                 Label5.Text = "THE PASSWORD FIELD IS REQUIRED.";
                 valid = false;
             }
-            else if (!check(TextBox1.Text, TextBox2.Text))
+            else if ( !check(TextBox1.Text, TextBox2.Text)&&search(TextBox1.Text))
             {
                 Label5.Text = "THE PASSWORD IS NOT CORRECT";
                 valid = false;
             }
             //log in successfully
-            else
-            {
+            if (valid)
+            { 
                 Label5.Text = "";
                 Session["UserName"] = email;
                 if (selectStatus(email))

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Windows;
+using System.Windows.Forms;
 
 namespace Group_Project
 {
@@ -17,7 +17,7 @@ namespace Group_Project
         {
             try
             {
-                con = new SqlConnection(@"Data Source=DESKTOP-N12O8I6\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
                 con.Open();
             }
             catch (Exception ex)
