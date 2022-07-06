@@ -13,7 +13,7 @@ namespace Group_Project
         {
             if(Session["UserName"] != null)
             {
-                UserName.Text = "Hello " + Session["UserName"];
+                UserName.Text = Session["UserName"].ToString();
             }
         }
     }
