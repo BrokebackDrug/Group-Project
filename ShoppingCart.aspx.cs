@@ -18,7 +18,7 @@ namespace Group_Project
 
         Hashtable ht;
         //DataTable dt;
-        SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=ShoeStore;Integrated Security=True");
 
         SqlCommand cmd;
         SqlDataReader sdr;
@@ -48,18 +48,8 @@ namespace Group_Project
                 Label1.Text = "The cart is empty now";
                 Label3.Text = "0";
             }
-
-
-            if (true)
-            {
-                Bind();
-            }
-
         }
 
-        public void Bind() { 
-            ///empty
-        }
 
         protected void Clear_cart(object sender, EventArgs e)
         {
@@ -83,11 +73,6 @@ namespace Group_Project
                 Response.Write("error" + ex.ToString());
             }
 
-
-        }
-
-        protected void GridView1_RowDeleting()
-        {
 
         }
 

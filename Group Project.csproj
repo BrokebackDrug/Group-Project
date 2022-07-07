@@ -104,7 +104,6 @@
     <Content Include="images\twitter-icon.png" />
     <Content Include="Login.aspx" />
     <Content Include="Man.aspx" />
-    <Content Include="Manshoes.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="ShoppingCart.aspx" />
     <Content Include="Web.config" />
@@ -173,13 +172,6 @@
     </Compile>
     <Compile Include="Man.aspx.designer.cs">
       <DependentUpon>Man.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Manshoes.aspx.cs">
-      <DependentUpon>Manshoes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Manshoes.aspx.designer.cs">
-      <DependentUpon>Manshoes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
