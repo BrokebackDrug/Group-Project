@@ -22,7 +22,7 @@ namespace Group_Project
             }
             catch (Exception ex)
             {
-                Response.Write("error" + ex.ToString());
+ 
             }
         }
 
@@ -47,7 +47,6 @@ namespace Group_Project
                 }
             }catch(Exception ex)
             {
-                Response.Write("error" + ex.ToString());
                 return false;
             }
 

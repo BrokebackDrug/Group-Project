@@ -23,7 +23,6 @@ namespace Group_Project
             }
             catch (Exception ex)
             {
-                Response.Write("error" + ex.ToString());
             }
         }
         //check if this user exists
@@ -49,7 +48,6 @@ namespace Group_Project
             }
             catch (Exception ex)
             {
-                Response.Write("error" + ex.ToString());
                 return false;
             }
         }
@@ -73,7 +71,6 @@ namespace Group_Project
             }
             catch (Exception e)
             {
-                Response.Write("error" + e.ToString());
                 return false;
             }
         }
@@ -104,7 +101,6 @@ namespace Group_Project
             }
             catch(Exception ex)
             {
-                Response.Write("error"+ex.ToString());
                 return false;
             }
 
@@ -138,8 +134,8 @@ namespace Group_Project
                 valid = false;
             }
             //log in successfully
-            else
-            {
+            if(valid)
+            { 
                 Label5.Text = "";
                 Session["UserName"] = email;
                 if (selectStatus(email))
