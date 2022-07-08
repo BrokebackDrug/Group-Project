@@ -35,7 +35,7 @@ namespace Group_Project
                 DataSet myds = new DataSet();
                 myda.Fill(myds, "product");
                 GridView1.DataKeyNames = new string[] { "PRODUCT_ID" };//primary kay
-                GridView1.DataBind();
+                //GridView1.DataBind();
                 con.Close();      
         }
 
