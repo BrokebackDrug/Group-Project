@@ -17,13 +17,12 @@ namespace Group_Project
         {
             try
             {
-                //con = new SqlConnection(@"Data Source=TANG;Initial Catalog=shoestore;Integrated Security=True");
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=ShoeStore;Integrated Security=True");
                 con.Open();
             }
             catch (Exception ex)
             {
-                Response.Write("error" + ex.ToString());
+ 
             }
         }
 
@@ -48,7 +47,6 @@ namespace Group_Project
                 }
             }catch(Exception ex)
             {
-                Response.Write("error" + ex.ToString());
                 return false;
             }
 

@@ -18,13 +18,11 @@ namespace Group_Project
         {
             try
             {
-                //con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
-                con = new SqlConnection(@"Data Source=LAPTOP-IV4806AO\MSSQLSERVER03;Initial Catalog=shoestore;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=ShoeStore;Integrated Security=True");
                 con.Open();
             }
             catch (Exception ex)
             {
-                Response.Write("error" + ex.ToString());
             }
         }
         //check if this user exists
@@ -105,6 +103,7 @@ namespace Group_Project
             {
                 return false;
             }
+
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -135,7 +134,7 @@ namespace Group_Project
                 valid = false;
             }
             //log in successfully
-            if (valid)
+            if(valid)
             { 
                 Label5.Text = "";
                 Session["UserName"] = email;
