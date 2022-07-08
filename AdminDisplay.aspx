@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="429px" Width="863px" DataKeyNames="PRODUCT_ID,PRODUCT_NAME,PRODUCT_DESCRIPTION,PRODUCT_PRICE,PRODUCT_STOCK,PRODUCT_TYPE,PRODUCT_IMAGE" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" >
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="#333333" GridLines="None" Height="429px" Width="863px" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" >
         <AlternatingRowStyle BackColor="White" />
         
         <Columns>
@@ -14,8 +14,6 @@
             <asp:BoundField DataField="PRODUCT_STOCK" HeaderText="PRODUCT_STOCK" SortExpression="PRODUCT_STOCK" />
             <asp:BoundField DataField="PRODUCT_TYPE" HeaderText="PRODUCT_TYPE" SortExpression="PRODUCT_TYPE" />
             <asp:BoundField DataField="PRODUCT_IMAGE" HeaderText="PRODUCT_IMAGE" SortExpression="PRODUCT_IMAGE" />
-            <asp:CommandField ButtonType="Button" ShowEditButton="True" />
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -28,6 +26,8 @@
         <SortedDescendingCellStyle BackColor="#E9EBEF" />
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ShoeStoreConnectionString5 %>" SelectCommand="SELECT * FROM [product]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ShoeStoreConnectionString4 %>" SelectCommand="SELECT * FROM [carts]"></asp:SqlDataSource>
         </center>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString3 %>" SelectCommand="SELECT * FROM [product]" DeleteCommand="DELETE FROM [product] WHERE [PRODUCT_ID] = @PRODUCT_ID" InsertCommand="INSERT INTO [product] ([PRODUCT_NAME], [PRODUCT_DESCRIPTION], [PRODUCT_PRICE], [PRODUCT_STOCK], [PRODUCT_TYPE], [PRODUCT_IMAGE]) VALUES (@PRODUCT_NAME, @PRODUCT_DESCRIPTION, @PRODUCT_PRICE, @PRODUCT_STOCK, @PRODUCT_TYPE, @PRODUCT_IMAGE)" UpdateCommand="UPDATE [product] SET [PRODUCT_NAME] = @PRODUCT_NAME, [PRODUCT_DESCRIPTION] = @PRODUCT_DESCRIPTION, [PRODUCT_PRICE] = @PRODUCT_PRICE, [PRODUCT_STOCK] = @PRODUCT_STOCK, [PRODUCT_TYPE] = @PRODUCT_TYPE, [PRODUCT_IMAGE] = @PRODUCT_IMAGE WHERE [PRODUCT_ID] = @PRODUCT_ID">
         <DeleteParameters>

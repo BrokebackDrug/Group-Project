@@ -46,7 +46,8 @@ namespace Group_Project
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=TS\SQLEXPRESS;Initial Catalog=shoestore;Integrated Security=True");
+                name = (String)Session["UserName"];
+                SqlConnection con = new SqlConnection(@"Data Source=TANG;Initial Catalog=ShoeStore;Integrated Security=True");
                 con.Open();
                 String selectOrder = "select * from carts where ORDER_USERNAME = '" + name + "'"
                     + " and ORDER_PRODUCT_NAME = '" + Label1.Text + "'";
