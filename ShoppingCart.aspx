@@ -40,7 +40,29 @@
                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True" DeleteText="Remove" />
             </Columns>
         </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ShoeStoreConnectionString4 %>" SelectCommand="SELECT * FROM [carts]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ShoeStoreConnectionStringXXZ %>" SelectCommand="SELECT * FROM [carts] WHERE ([ORDER_USERNAME] = @ORDER_USERNAME)" DeleteCommand="DELETE FROM [carts] WHERE [ORDER_ID] = @ORDER_ID" InsertCommand="INSERT INTO [carts] ([ORDER_USERNAME], [ORDER_PRODUCT_NAME], [ORDER_PRODUCT_PRICE], [ORDER_PRODUCT_IMAGE], [ORDER_NUMBER]) VALUES (@ORDER_USERNAME, @ORDER_PRODUCT_NAME, @ORDER_PRODUCT_PRICE, @ORDER_PRODUCT_IMAGE, @ORDER_NUMBER)" UpdateCommand="UPDATE [carts] SET [ORDER_USERNAME] = @ORDER_USERNAME, [ORDER_PRODUCT_NAME] = @ORDER_PRODUCT_NAME, [ORDER_PRODUCT_PRICE] = @ORDER_PRODUCT_PRICE, [ORDER_PRODUCT_IMAGE] = @ORDER_PRODUCT_IMAGE, [ORDER_NUMBER] = @ORDER_NUMBER WHERE [ORDER_ID] = @ORDER_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="ORDER_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="ORDER_USERNAME" Type="String" />
+                    <asp:Parameter Name="ORDER_PRODUCT_NAME" Type="String" />
+                    <asp:Parameter Name="ORDER_PRODUCT_PRICE" Type="Decimal" />
+                    <asp:Parameter Name="ORDER_PRODUCT_IMAGE" Type="String" />
+                    <asp:Parameter Name="ORDER_NUMBER" Type="Int32" />
+                </InsertParameters>
+                <SelectParameters>
+                    <asp:SessionParameter DefaultValue="dmt1909203@xmu.edu.my" Name="ORDER_USERNAME" SessionField="UserName" Type="String" />
+                </SelectParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="ORDER_USERNAME" Type="String" />
+                    <asp:Parameter Name="ORDER_PRODUCT_NAME" Type="String" />
+                    <asp:Parameter Name="ORDER_PRODUCT_PRICE" Type="Decimal" />
+                    <asp:Parameter Name="ORDER_PRODUCT_IMAGE" Type="String" />
+                    <asp:Parameter Name="ORDER_NUMBER" Type="Int32" />
+                    <asp:Parameter Name="ORDER_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
         <asp:SqlDataSource ID="SqlDataSource_Cart" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString3 %>" 
             SelectCommand="SELECT * FROM [carts] WHERE ORDER_USERNAME = @_USERNAME" DeleteCommand="DELETE FROM [carts] WHERE [ORDER_ID] = @ORDER_ID">

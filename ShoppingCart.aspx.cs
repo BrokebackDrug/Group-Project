@@ -55,6 +55,7 @@ namespace Group_Project
         {
             try
             {
+
                 con.Open();
                 String clearOrders = "delete from carts where ORDER_USERNAME = '" + name + "'";
                 SqlCommand cmd = new SqlCommand(clearOrders, con);

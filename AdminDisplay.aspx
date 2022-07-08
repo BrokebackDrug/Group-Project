@@ -29,10 +29,7 @@
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
         </center>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:shoestoreConnectionString3 %>" SelectCommand="SELECT * FROM [product]" DeleteCommand="DELETE FROM [product] WHERE [PRODUCT_ID] = @PRODUCT_ID" InsertCommand="INSERT INTO [product] ([PRODUCT_NAME], [PRODUCT_DESCRIPTION], [PRODUCT_PRICE], [PRODUCT_STOCK], [PRODUCT_TYPE], [PRODUCT_IMAGE]) VALUES (@PRODUCT_NAME, @PRODUCT_DESCRIPTION, @PRODUCT_PRICE, @PRODUCT_STOCK, @PRODUCT_TYPE, @PRODUCT_IMAGE)" UpdateCommand="UPDATE [product] SET [PRODUCT_NAME] = @PRODUCT_NAME, [PRODUCT_DESCRIPTION] = @PRODUCT_DESCRIPTION, [PRODUCT_PRICE] = @PRODUCT_PRICE, [PRODUCT_STOCK] = @PRODUCT_STOCK, [PRODUCT_TYPE] = @PRODUCT_TYPE, [PRODUCT_IMAGE] = @PRODUCT_IMAGE WHERE [PRODUCT_ID] = @PRODUCT_ID">
-        <DeleteParameters>
-            <asp:Parameter Name="PRODUCT_ID" Type="Int32" />
-        </DeleteParameters>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ShoeStoreConnectionStringXXZ %>" SelectCommand="SELECT * FROM [product]" InsertCommand="INSERT INTO [product] ([PRODUCT_NAME], [PRODUCT_DESCRIPTION], [PRODUCT_PRICE], [PRODUCT_STOCK], [PRODUCT_TYPE], [PRODUCT_IMAGE]) VALUES (@PRODUCT_NAME, @PRODUCT_DESCRIPTION, @PRODUCT_PRICE, @PRODUCT_STOCK, @PRODUCT_TYPE, @PRODUCT_IMAGE)">
         <InsertParameters>
             <asp:Parameter Name="PRODUCT_NAME" Type="String" />
             <asp:Parameter Name="PRODUCT_DESCRIPTION" Type="String" />
@@ -41,15 +38,6 @@
             <asp:Parameter Name="PRODUCT_TYPE" Type="String" />
             <asp:Parameter Name="PRODUCT_IMAGE" Type="String" />
         </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="PRODUCT_NAME" Type="String" />
-            <asp:Parameter Name="PRODUCT_DESCRIPTION" Type="String" />
-            <asp:Parameter Name="PRODUCT_PRICE" Type="Decimal" />
-            <asp:Parameter Name="PRODUCT_STOCK" Type="Int32" />
-            <asp:Parameter Name="PRODUCT_TYPE" Type="String" />
-            <asp:Parameter Name="PRODUCT_IMAGE" Type="String" />
-            <asp:Parameter Name="PRODUCT_ID" Type="Int32" />
-        </UpdateParameters>
     </asp:SqlDataSource>
     
 </asp:Content>
